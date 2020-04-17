@@ -1,13 +1,11 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<h1>User Management system</h1>
+<a href="#" (click)="newUser()">New User</a>
+<div class="main">
+  <div class="users">
+  <app-users (updateUser) = "updateUser($event)"></app-users>
+  </div>
+  <div class="userDetail" *ngIf="showForm">
+    <app-user-detail [user] = "userSelected"></app-user-detail>
 
-<h1>User managment system</h1>
-<app-user></app-user>
-<app-users></app-users>
-
+  </div>
+</div>
